@@ -20,6 +20,10 @@ export default class MyDocument extends Document {
       <Html lang="ru">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

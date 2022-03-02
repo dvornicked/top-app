@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Button, Htag } from '../components'
+import { Button, Htag, P } from '../components'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +11,9 @@ const Home: NextPage = () => {
       <Htag tag='h1'>Text</Htag>
       <Button appearance='primary' arrow='right'>Кнопка</Button>
       <Button appearance='ghost' arrow='down'>Кнопка</Button>
+      <P size='s'>Параграф</P>
+      <P>Параграф</P>
+      <P size='l'>Параграф</P>
     </>
   )
 }

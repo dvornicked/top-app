@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
 import { Button, Htag, P, Rating, Tag } from '../components'
+import { withLayout } from '../layout/Layout'
 
 const Home: NextPage = () => {
 
@@ -28,4 +29,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default withLayout(Home)

@@ -27,9 +27,7 @@ const Home: NextPage<HomeProps> = ({menu, firstCategory}): JSX.Element => {
       <Tag className='s' color='gray'>G ray</Tag>
       <Tag color='primary'>Мал</Tag>
       <Rating rating={rating} setRating={setRating} isEditable/>
-      <ul>
-        {menu.map(m => <li key={m._id.secondCategory}>{m._id.secondCategory}</li>)}
-      </ul>
+      
     </>
   )
 }

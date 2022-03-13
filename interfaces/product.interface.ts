@@ -19,6 +19,7 @@ export interface ReviewModel {
 }
 
 export interface ProductModel {
+  sort(arg0: (a: any, b: any) => 1 | -1): ProductModel
   _id: string
   categories: string[]
   tags: string[]

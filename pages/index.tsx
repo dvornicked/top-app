@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import { Button, Htag, P, Rating, Tag } from '../components'
+import { Button, Htag, Input, P, Rating, Tag } from '../components'
 import { withLayout } from '../layout/Layout'
 import axios from 'axios'
 import { MenuItem } from '../interfaces/menu.interface'
@@ -24,10 +24,10 @@ const Home: NextPage<HomeProps> = ({menu, firstCategory}): JSX.Element => {
       <Tag className='s'>Ghost</Tag>
       <Tag className='m' color='red'>Red</Tag>
       <Tag className='s' color='green'>Green</Tag>
-      <Tag className='s' color='gray'>G ray</Tag>
+      <Tag className='s' color='gray'>Gray</Tag>
       <Tag color='primary'>Мал</Tag>
       <Rating rating={rating} setRating={setRating} isEditable/>
-      
+      <Input placeholder='Text' />
     </>
   )
 }

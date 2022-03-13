@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['courses-top.ru']
+  },
   reactStrictMode: true,
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(

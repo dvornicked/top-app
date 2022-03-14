@@ -10,6 +10,7 @@ import { Divider } from '../Divider/Divider'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Review } from '../Review/Review'
+import { ReviewForm } from '../ReviewForm/ReviewForm'
 
 export const Product = ({
   product,
@@ -98,7 +99,8 @@ export const Product = ({
         [styles.opened]: isReviewOpened,
         [styles.closed]: !isReviewOpened,
       })}>
-        {product.reviews.length ? product.reviews.map(r => (<Review key={r._id} review={r} />)): <span>Нет отзывов</span>}
+        {product.reviews.length ? product.reviews.map(r => (<div key={r._id}><Review review={r} /><Divider /></div>)): <><span>Нет отзывов</span><Divider /></>}
+        <ReviewForm productId={product._id}/>
       </Card>
     </>
   )

@@ -47,6 +47,19 @@
   cursor: pointer;
 }
 
+.error {
+  background-color: #FC836D;
+  padding: 20px;
+  position: relative;
+  grid-column: start /end;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.error svg path {
+  stroke: var(--red)
+}
+
 @media screen and (max-width: 1200px) {
   .reviewForm {
     grid-template-columns: [start] 1fr 1fr [end];

@@ -132,21 +132,14 @@
   margin-bottom: 5px;
 }
 
-.closed {
-  overflow: hidden;
-  max-height: 0;
-  padding: 0;
-}
-
-.opened {
-  overflow: hidden;
-  padding: 30px;
-}
-
 .rateTitle a {
   color: var(--primary);
 }
 
+.review {
+  overflow: hidden;
+  padding: 30px;
+}
 
 @media screen and (max-width: 1320px) {
   .product {

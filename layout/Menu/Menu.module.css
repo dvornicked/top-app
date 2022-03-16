@@ -39,19 +39,10 @@
 }
 
 .secondLevelBlock {
-  display: none;
-}
-
-.secondLevelBlockOpened {
-  display: block;
-}
-
-.secondBlockOpened:last-child {
-  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .thirdLevel {
-  margin-bottom: 10px;
   display: block;
   cursor: pointer;
   color: var(--gray--dark);

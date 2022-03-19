@@ -13,12 +13,14 @@ import { TopLevelCategory } from '../../interfaces/page.interface'
 import { SortEnum } from '../../components/Sort/Sort.props'
 import { useEffect, useReducer } from 'react'
 import { SortReducer } from '../../components/Sort/sort.reducer'
+import { useReducedMotion } from 'framer-motion'
 
 export const TopPageComponent = ({
   page,
   products,
   firstCategory
 }: TopPageComponentProps): JSX.Element => {
+  const shouldReduceMotion = useReducedMotion()
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
     SortReducer,
     { products, sort: SortEnum.Rating }
@@ -45,7 +47,7 @@ export const TopPageComponent = ({
       </div>
       <div role='list'>
         {sortedProducts &&
-          sortedProducts.map(p => <Product role='listitem' layout key={p._id} product={p} />)}
+          sortedProducts.map(p => <Product role='listitem' layout={shouldReduceMotion ? false : true} key={p._id} product={p} />)}
       </div>
       <div className={styles.hhTitle}>
         <Htag tag="h2">Вакансии - {page.title}</Htag>

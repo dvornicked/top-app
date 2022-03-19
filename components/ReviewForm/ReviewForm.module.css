@@ -40,11 +40,12 @@
   font-weight: bold;
 }
 
-.success svg {
+.success button {
   position: absolute;
   right: 10px;
   top: 10px;
-  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .error {

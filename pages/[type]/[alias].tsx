@@ -23,7 +23,11 @@ const TopPage: NextPage<TopPageProps> = ({
   return (
     <>
       <Head>
-        <title>MyTop</title>
+        <title>{page.metaTitle}</title>
+        <meta name='description' content={page.metaDescription}/>
+        <meta property='og:title' content={page.metaTitle}/>
+        <meta property='og:description' content={page.metaDescription}/>
+        <meta property='og:type' content='article'/>
       </Head>
       <TopPageComponent
         firstCategory={firstCategory}

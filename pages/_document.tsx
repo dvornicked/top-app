@@ -19,8 +19,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

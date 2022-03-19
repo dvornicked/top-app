@@ -66,18 +66,16 @@ export const Menu = (): JSX.Element => {
       <ul className={styles.firstLevelList}>
         {firstLevelMenu.map(m => (
           <li key={m.route}>
-            <Link href={`/${m.route}`}>
-              <a>
-                <div
-                  className={cn(styles.firstLevel, {
-                    [styles.firstLevelActive]: m.id == firstCategory
-                  })}
-                >
-                  {m.icon}
-                  <span>{m.name}</span>
-                </div>
-              </a>
-            </Link>
+            <a href={`/${m.route}`}>
+              <div
+                className={cn(styles.firstLevel, {
+                  [styles.firstLevelActive]: m.id == firstCategory
+                })}
+              >
+                {m.icon}
+                <span>{m.name}</span>
+              </div>
+            </a>
             {m.id == firstCategory && buildSecondLevel(m)}
           </li>
         ))}

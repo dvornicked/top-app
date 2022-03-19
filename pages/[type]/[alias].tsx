@@ -22,18 +22,22 @@ const TopPage: NextPage<TopPageProps> = ({
 }): JSX.Element => {
   return (
     <>
-      <Head>
-        <title>{page.metaTitle}</title>
-        <meta name="description" content={page.metaDescription} />
-        <meta property="og:title" content={page.metaTitle} />
-        <meta property="og:description" content={page.metaDescription} />
-        <meta property="og:type" content="article" />
-      </Head>
-      <TopPageComponent
-        firstCategory={firstCategory}
-        page={page}
-        products={products}
-      />
+      {page && (
+        <>
+          <Head>
+            <title>{page.metaTitle}</title>
+            <meta name="description" content={page.metaDescription} />
+            <meta property="og:title" content={page.metaTitle} />
+            <meta property="og:description" content={page.metaDescription} />
+            <meta property="og:type" content="article" />
+          </Head>
+          <TopPageComponent
+            firstCategory={firstCategory}
+            page={page}
+            products={products}
+          />
+        </>
+      )}
     </>
   )
 }
@@ -63,7 +67,6 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({
   const firstCategoryItem =
     params && firstLevelMenu.find(m => m.route == params.type)
   if (!firstCategoryItem) return { notFound: true }
-
   try {
     const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
       firstCategory: firstCategoryItem.id

@@ -43,7 +43,6 @@
 }
 
 .advBlock {
-  grid-area: advBlock;
   grid-column: middle / end;
   font-size: 16px;
   line-height: 22px;
@@ -110,7 +109,7 @@
 .advantages {
   padding-left: 15px;
   margin-bottom: 20px;
-  border-left: 2px solid #1DC37E;
+  border-left: 2px solid #1dc37e;
 }
 
 .disadvantages {
@@ -205,6 +204,10 @@
   .feature {
     grid-area: feature;
     margin-bottom: 20px;
+  }
+
+  .advBlock {
+    grid-area: advBlock;
   }
 
   .hr2 {

@@ -24,15 +24,15 @@ a {
 }
 
 :root {
-  --black: #3b434e;
-  --gray-light: #ebebeb;
-  --gray-dark: #787d85;
+  --black: #3B434E;
+  --gray-light: #EBEBEB;
+  --gray-dark: #787D85;
   --white: white;
-  --primary: #724ffc;
-  --primary-hover: #5b32fb;
-  --red: #fc836d;
-  --green: #127a4f;
-  --green-light: #c8f8e4;
+  --primary: #724FFC;
+  --primary-hover: #5B32FB;
+  --red: #FC836D;
+  --green: #127A4F;
+  --green-light: #C8F8E4;
   --font-family: "Noto Sans Display", sans-serif;
-  --background: #f5f6f8;
+  --background: #F5F6F8;
 }

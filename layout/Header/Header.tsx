@@ -33,10 +33,24 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   return (
     <header className={cn(styles.header, className)} {...props}>
       <Logo />
-      <ButtonIcon appearance='white' icon='menu' onClick={() => setIsOpened(true)}/>
-      <motion.div className={styles.mobileMenu} variants={variants} initial='closed' animate={isOpened ? 'opened' : 'closed'}>
+      <ButtonIcon
+        appearance="white"
+        icon="menu"
+        onClick={() => setIsOpened(true)}
+      />
+      <motion.div
+        className={styles.mobileMenu}
+        variants={variants}
+        initial="closed"
+        animate={isOpened ? 'opened' : 'closed'}
+      >
         <Sidebar />
-        <ButtonIcon className={styles.menuClose} appearance='white' icon='close' onClick={() => setIsOpened(false)}/>
+        <ButtonIcon
+          className={styles.menuClose}
+          appearance="white"
+          icon="close"
+          onClick={() => setIsOpened(false)}
+        />
       </motion.div>
     </header>
   )

@@ -68,7 +68,9 @@ export const Product = motion(
             {priceRu(product.credit)}/<span className={styles.month}>мес</span>
           </div>
           <div className={styles.rating}>
-            <span className="visualyHidden">{'рейтинг ' + (product.reviewAvg ?? product.initialRating)}</span>
+            <span className="visualyHidden">
+              {'рейтинг ' + (product.reviewAvg ?? product.initialRating)}
+            </span>
             <Rating rating={product.reviewAvg ?? product.initialRating} />
           </div>
           <div className={styles.tags}>

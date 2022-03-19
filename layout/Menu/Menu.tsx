@@ -18,10 +18,12 @@ export const Menu = (): JSX.Element => {
   const variants = {
     visible: {
       marginBottom: 20,
-      transition: shouldReduceMotion ? {} : {
-        when: 'beforeChildren',
-        staggerChildren: 0.1
-      }
+      transition: shouldReduceMotion
+        ? {}
+        : {
+            when: 'beforeChildren',
+            staggerChildren: 0.1
+          }
     },
     hidden: {
       marginBottom: 0
@@ -132,7 +134,9 @@ export const Menu = (): JSX.Element => {
             className={cn(styles.thirdLevel, {
               [styles.thirdLevelActive]: `/${route}/${p.alias}` == router.asPath
             })}
-            aria-current={`/${route}/${p.alias}` == router.asPath ? 'page' : false}
+            aria-current={
+              `/${route}/${p.alias}` == router.asPath ? 'page' : false
+            }
           >
             {p.category}
           </a>
@@ -143,7 +147,11 @@ export const Menu = (): JSX.Element => {
 
   return (
     <nav role="navigation" className={styles.menu}>
-      {announce && <span role='log' className='visualyHidden'>{announce == 'opened' ? 'Развернуто' : 'Свернуто'}</span>}
+      {announce && (
+        <span role="log" className="visualyHidden">
+          {announce == 'opened' ? 'Развернуто' : 'Свернуто'}
+        </span>
+      )}
       {buildFirstLevel()}
     </nav>
   )

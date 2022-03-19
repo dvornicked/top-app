@@ -8,7 +8,7 @@ export const ButtonIcon = ({
   className,
   ...props
 }: ButtonIconProps): JSX.Element => {
-  const IconComp = icons[icon ]
+  const IconComp = icons[icon]
   return (
     <button
       className={cn(styles.button, className, {

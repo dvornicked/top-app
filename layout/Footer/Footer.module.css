@@ -1,13 +1,12 @@
 .footer {
-  background-color: var(--primary);
-  padding: 25px 30px;
-  color: var(--white);
-  font-size: 16px;
-  line-height: 20px;
-
   display: grid;
   grid-template-columns: 1fr repeat(2, auto);
   gap: 10px 40px;
+  padding: 25px 30px;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+  background-color: var(--primary);
 }
 
 .footer a:hover {
@@ -16,6 +15,6 @@
 
 @media (max-width: 768px) {
   .footer {
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
 }

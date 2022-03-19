@@ -1,9 +1,9 @@
 .tag {
-  display: inline-block;
   box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 10px;
   margin-right: 5px;
   border-radius: 20px;
-  padding: 5px 10px;
 }
 
 .s {
@@ -21,21 +21,21 @@
 }
 
 .red {
-  color: var(--white);
-  background-color: #de0000;
   font-weight: bold;
+  color: var(--white);
+  background-color: #DE0000;
 }
 
 .gray {
-  color: var(--white);
-  background-color: #83c0d9;
   font-weight: bold;
+  color: var(--white);
+  background-color: #83C0D9;
 }
 
 .green {
+  font-weight: bold;
   color: var(--green);
   background-color: var(--green-light);
-  font-weight: bold;
 }
 
 .primary {

@@ -4,7 +4,12 @@ import styles from './HhData.module.css'
 import { HhDataProps } from './HhData.props'
 import RateIcon from './rate.svg'
 
-export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: HhDataProps): JSX.Element => {
+export const HhData = ({
+  count,
+  juniorSalary,
+  middleSalary,
+  seniorSalary
+}: HhDataProps): JSX.Element => {
   return (
     <div className={styles.hh}>
       <Card className={styles.count}>

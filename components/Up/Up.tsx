@@ -21,8 +21,12 @@ export const Up = (): JSX.Element => {
   }
 
   return (
-    <motion.div className={styles.up}  animate={controls} initial={{opacity: 0}}>
-      <ButtonIcon appearance='primary' icon='close' onClick={scrollToTop} />
+    <motion.div
+      className={styles.up}
+      animate={controls}
+      initial={{ opacity: 0 }}
+    >
+      <ButtonIcon appearance="primary" icon="close" onClick={scrollToTop} />
     </motion.div>
   )
 }

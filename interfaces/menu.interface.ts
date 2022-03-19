@@ -1,18 +1,18 @@
-import { TopLevelCategory } from './page.interface';
+import { TopLevelCategory } from './page.interface'
 
 export interface PageItem {
-  alias: string;
-  title: string;
-  _id: string;
-  category: string;
+  alias: string
+  title: string
+  _id: string
+  category: string
 }
 
 export interface MenuItem {
   _id: {
-    secondCategory: string;
+    secondCategory: string
   }
   isOpened?: boolean
-  pages: PageItem[];
+  pages: PageItem[]
 }
 
 export interface FirstLevelMenuItem {

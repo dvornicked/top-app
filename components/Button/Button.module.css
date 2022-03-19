@@ -1,16 +1,12 @@
 .button {
-  display: inline-block;
-
   box-sizing: border-box;
+  display: inline-block;
   padding: 10px;
-
-  cursor: pointer;
+  font-size: 14px;
   text-align: center;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
-
-  font-size: 14px;
-
   transition: background-color 0.2s;
 }
 
@@ -24,10 +20,10 @@
 }
 
 .ghost {
-  transition: color 0.2s, background-color 0.2s;
   color: var(--black);
   background: none;
   border: 1px solid var(--gray-light);
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .ghost:hover {
@@ -37,15 +33,15 @@
 
 .arrow {
   display: inline-flex;
-
   margin-left: 10px;
 }
 
 .down {
-  transform: rotate(90deg);
   transition: transform 0.2s;
+  transform: rotate(90deg);
 }
 
-.primary svg, .ghost:hover svg {
+.primary svg,
+.ghost:hover svg {
   fill: var(--white);
 }

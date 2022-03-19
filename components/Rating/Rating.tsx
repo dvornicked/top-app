@@ -35,10 +35,10 @@ export const Rating = forwardRef(function Rating(
 
   const computeFocus = (r: number, i: number): number => {
     if (!isEditable) {
-      return -1;
+      return -1
     }
     if (!rating && i == 0) {
-      return tabIndex ?? 0;
+      return tabIndex ?? 0
     }
     if (r == i + 1) {
       return 0
@@ -63,7 +63,7 @@ export const Rating = forwardRef(function Rating(
           ref={r => ratingArrayRef.current?.push(r)}
           role={isEditable ? 'slider' : ''}
           aria-valuenow={rating}
-          aria-label={isEditable ? 'Укажите рейтинг': ('Рейтинг' + rating)}
+          aria-label={isEditable ? 'Укажите рейтинг' : 'Рейтинг' + rating}
           aria-invalid={error ? true : false}
           aria-valuemin={1}
           aria-valuemax={5}
@@ -101,7 +101,7 @@ export const Rating = forwardRef(function Rating(
         e.preventDefault()
         setRating(rating < 5 ? rating + 1 : 5)
       }
-        ratingArrayRef.current[rating]?.focus()
+      ratingArrayRef.current[rating]?.focus()
     }
 
     if (e.code == 'ArrowLeft' || e.code == 'ArrowDown') {
@@ -120,7 +120,11 @@ export const Rating = forwardRef(function Rating(
       {...props}
     >
       {ratingArray}
-      {error && <span role='alert' className={styles.errorMessage}>{error.message}</span>}
+      {error && (
+        <span role="alert" className={styles.errorMessage}>
+          {error.message}
+        </span>
+      )}
     </div>
   )
 })

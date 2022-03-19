@@ -13,7 +13,7 @@ export const Button = ({
 }: ButtonProps): JSX.Element => {
   return (
     <motion.button
-    whileHover={{scale: 1.05}}
+      whileHover={{ scale: 1.05 }}
       className={cn(styles.button, className, {
         [styles.primary]: appearance === 'primary',
         [styles.ghost]: appearance === 'ghost'
